@@ -1,0 +1,21 @@
+{
+  "name": "covid",
+  "version": "1.0.0",
+  "description": "covid map canada",
+  "author": "Jeremy",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/pwa": "^3.0.0-0",
+    "chart.js": "^2.9.3",
+    "nuxt": "^2.0.0",
+    "vue-chartjs": "^3.5.0"
+  },
+  "devDependencies": {}
+}
