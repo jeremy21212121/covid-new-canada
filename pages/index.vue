@@ -4,9 +4,9 @@
       Sorry, error getting data. Please try again later.
     </span>
     <span v-if="ready" :title="'Updated ' + newCases.last_updated + ' GMT'">Last updated {{ humanTime(new Date(newCases.last_updated+'Z').getTime()) }} ago</span>
-    <!-- <client-only> -->
+    <client-only>
       <line-chart v-if="ready" :chart-data="chartdata" :styles="styles" :apiData="newCases" />
-    <!-- </client-only> -->
+    </client-only>
   </div>
 </template>
 
