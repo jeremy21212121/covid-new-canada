@@ -1,6 +1,11 @@
-
 export default {
   mode: 'universal',
+  server: {
+    port: 4321
+  },
+  // router: {
+  //   baseUrl: '/covid/'
+  // },
   /*
   ** Headers of the page
   */
@@ -12,7 +17,7 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: './favicon.ico' }
     ]
   },
   /*
@@ -40,7 +45,7 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa',
+    // '@nuxtjs/pwa',
   ],
   /*
   ** Axios module configuration
@@ -55,7 +60,12 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
+    extend (config, { isDev }) {
+      // this fixes a prod bug caused by proxying with NGINX from a sub-directory rather than the top level domain. ie. jeremypoole.ca/covid. I could have made a subdomain instead, I guess I'm just lazy :P
+      // see https://github.com/nuxt/nuxt.js/issues/1947#issuecomment-416013725
+      if (true) {
+        config.output.publicPath = './_nuxt/'
+      }
     }
   }
 }

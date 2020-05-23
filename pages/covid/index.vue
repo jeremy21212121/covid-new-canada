@@ -22,7 +22,7 @@ import humanTime from '@/utils/humanTime'
 import LineChart from '@/components/LineChart'
 
 export default {
-  name: 'Main',
+  name: 'MainCovid',
   components: {
     LineChart
   },
