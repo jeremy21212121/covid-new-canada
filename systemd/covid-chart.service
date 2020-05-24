@@ -1,0 +1,18 @@
+[Unit]
+Description=COVID19 Chart built with Nuxt
+# Requires=network-online.target
+After=syslog.target network-online.target
+[Service]
+WorkingDirectory=/opt/covid
+ExecStart=/usr/bin/npm run start
+Restart=always
+# Restart service after 10 seconds if node service crashes 
+RestartSec=10
+# Output to syslog
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=covid-nuxt
+User=ubuntu
+Group=ubuntu
+# Environment="NUXT_PORT=3000"
+
