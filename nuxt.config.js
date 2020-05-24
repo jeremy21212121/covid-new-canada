@@ -3,18 +3,12 @@ export default {
   server: {
     port: 4321
   },
-  // router: {
-  //   baseUrl: '/covid/'
-  // },
-  /*
-  ** Headers of the page
-  */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'COVID-19 Chart',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: 'New Canadian COVID-19 Cases Per Million People' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: './favicon.ico' }
