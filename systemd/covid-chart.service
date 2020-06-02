@@ -2,6 +2,7 @@
 Description=COVID19 Chart built with Nuxt
 # Requires=network-online.target
 After=syslog.target network-online.target
+
 [Service]
 WorkingDirectory=/opt/covid
 ExecStart=/usr/bin/npm run start
@@ -15,4 +16,7 @@ SyslogIdentifier=covid-nuxt
 User=ubuntu
 Group=ubuntu
 # Environment="NUXT_PORT=3000"
+
+[Install]
+WantedBy=multi-user.target
 
