@@ -1,5 +1,7 @@
 # COVID-19 New Cases per Capita in Canada
 
+> See the chart in action (here)[https://jeremypoole.ca/covid]
+
 CBC has some good charts for exploring COVID-19 data. Unfortunately, comparing absolute numbers across provinces with very different populations does not allow for easy comparison.
 
 Fortunately, CBCs APIs are publically accessible. So I built this chart of new cases per million people. This makes the chart more interesting, to me at least.
