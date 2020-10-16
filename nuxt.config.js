@@ -1,5 +1,4 @@
 export default {
-  mode: 'universal',
   server: {
     port: 4321
   },
