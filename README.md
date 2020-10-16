@@ -8,7 +8,7 @@ Fortunately, CBCs APIs are publically accessible. So I built this chart of new c
 
 I took the latest population figures for Canada and the provinces from StatsCan, and corrected the figures from CBC's API to be per million in population.
 
-BC does not announce numbers on Sundays. Most charts just show a zero for that day, which I believe to be deceptive. As such, I simply don't include a data point for BC for Sundays, and I use Chart.js's ```spanGaps``` option to avoid a break in the line.
+BC, Alberta and Ontario do not release numbers on certain days. A best-effort has been made to differentiate these days from legitamite 0-number days. Consecutive unreported days are averaged with the next reported day. This prevents deceptive spikes in the chart.
 
 # Use
 
