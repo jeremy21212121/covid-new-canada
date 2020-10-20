@@ -1,6 +1,6 @@
 # COVID-19 New Cases per Capita in Canada
 
-> See the chart in action (here)[https://jeremypoole.ca/covid]
+> See the chart in action [here](https://jeremypoole.ca/covid)
 
 CBC has some good charts for exploring COVID-19 data. Unfortunately, comparing absolute numbers across provinces with very different populations does not allow for easy comparison.
 
@@ -10,7 +10,7 @@ Fortunately, CBCs APIs are publically accessible. So I built this chart of new c
 
 I took the latest population figures for Canada and the provinces from StatsCan, and corrected the figures from CBC's API to be per million in population.
 
-BC, Alberta and Ontario do not release numbers on certain days. A best-effort has been made to differentiate these days from legitamite 0-number days. Consecutive unreported days are averaged with the next reported day. This prevents deceptive spikes in the chart.
+BC, Alberta and Ontario do not release numbers on certain days. A best-effort has been made to differentiate these days from legitamite 0-number days. Consecutive unreported days are averaged with the next reported day (see `averageNulls` function in `mixins/dataProcessing.js`). This prevents misleading spikes in the chart.
 
 # Use
 
@@ -20,7 +20,7 @@ Absolute numbers can be seen by hovering over individual data points.
 
 # Stack
 
-Server-side rendered with Nuxt.js/Vue.js, proxied by NGINX on my personal web server.
+Server-side rendered with Nuxt.js/Vue.js, proxied by NGINX on my personal web server. Now, obviously, canvas elements can't be rendered on the server, but the API call and processing of data all occurs server-side.
 
 ## Build Setup
 
