@@ -15,8 +15,8 @@ export default {
         maintainAspectRatio: false,
         spanGaps: true,
         title: {
-          display: true,
-					text: 'New Canadian COVID-19 Cases Per Million People'
+          display: false,
+					text: 'Daily New Cases of COVID-19 Per Capita'
         },
         legend: {
           position: 'bottom'
